@@ -1,2 +1,9 @@
 # disaster_response
 Udacity Nanodegree Project Disaster Response
+
+PROJECT SUMMARY
+
+OVERVIEW ON REQUIRED FILE STRUCTURE
+
+OVERVIEW ON SCRIPTS AND HOW TO USE THEM
+
