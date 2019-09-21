@@ -45,8 +45,49 @@ def index():
     genre_names = list(genre_counts.index)
     
     # create visuals
-    # TODO: Below is an example - modify to create your own visuals
+    # visualization of output category frequency in training data
+    df_categories = df.drop(["id", "message", "original", "genre"], axis=1)
+    output_categories_percentage =  (df_categories[df_categories!=0].sum()/df_categories.shape[0]).round(decimals=3)
+    output_categories = output_categories_percentage.index.tolist()
+    category_frequency = output_categories_percentage.tolist()
+    
     graphs = [
+        {
+            'data': [
+                Bar(
+                    x=output_categories,
+                    y=category_frequency
+                )
+            ],
+
+            'layout': {
+                'title': 'Frequency of output categories',
+                'yaxis': {
+                    'title': "Proportion of total"
+                },
+                'xaxis': {
+                    'title': ""
+                }
+            }
+        },
+        {
+            'data': [
+                Bar(
+                    x=output_categories,
+                    y=category_frequency
+                )
+            ],
+
+            'layout': {
+                'title': 'Frequency of output categories',
+                'yaxis': {
+                    'title': "Proportion of total"
+                },
+                'xaxis': {
+                    'title': ""
+                }
+            }
+        },
         {
             'data': [
                 Bar(
@@ -65,6 +106,7 @@ def index():
                 }
             }
         }
+        
     ]
     
     # encode plotly graphs in JSON
