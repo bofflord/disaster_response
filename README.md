@@ -55,20 +55,7 @@ The project therefore consists of three main elements:
 * Script for model training
 * Web app that displays training data information and uses to previously trained model to predict on data.
 
-
-# 3. FILE DESCRIPTIONS
-* "process_data.py": python script for data processing
-* "train_classifier.py": python script for model training
-* "run.py": python script that starts web app
-* "master.html": html landing page of web app. Displays the following statistics:
-  * tbd
-  * tbd
-  * tbd
-* "go.hmtl": html page that displays classification results of model.
-TBD
-
-
-# 4. OVERVIEW ON REQUIRED FILE STRUCTURE
+# 3. OVERVIEW ON REQUIRED FILE STRUCTURE
 The above mentioned commands requrire the following file structure:
 - app
 | - template
@@ -86,6 +73,26 @@ The above mentioned commands requrire the following file structure:
 |- train_classifier.py
 |- classifier.pkl  # saved model
 
+# 4. FILE DESCRIPTIONS
+* "process_data.py": python script for data processing. How to use the file:
+ * go to the "data" directory.
+ * execute the script with the following parameters
+ * explanation of parameters:
+  * tbd
+* "train_classifier.py": python script for model training. How to use the file:
+ * go to the "data" directory.
+ * execute the script with the following parameters
+ * explanation of parameters:
+  * tbd
+* "run.py": python script that starts web app. How to use the file:
+ * go to the "data" directory.
+ * execute the script without any parameters
+* "master.html": html landing page of web app. Displays the following statistics on the training data:
+  * Histogram of word count per message
+  * Frequency of output categories
+  * Distribution of message genres
+* "go.hmtl": html page that displays classification results of model.
+TBD
 
 # 5. HOW TO INTERACT WITH THE PROJECT
 TBD
