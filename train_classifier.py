@@ -45,10 +45,6 @@ def load_data(database_filepath):
     category_names: name of output categories
     
     '''
-    #testing-start
-    #print("database_filepath: {}".format(database_filepath))
-    #print("complete path to db: {}".format('sqlite:////home/workspace/data' + database_filepath))
-    #testing-end
     
     # load data from database
     #engine = create_engine(database_filepath)
@@ -98,10 +94,17 @@ def build_model():
     pipeline = Pipeline([
         ('vect', CountVectorizer(tokenizer=tokenize)),
         ('tfidf', TfidfTransformer()),
-        # ToDo: optimize estimator function after GridSearch is done
         ('clf', MultiOutputClassifier(RandomForestClassifier(), n_jobs=-1))
     ])
-    return pipeline
+    parameters = {'clf__estimator__criterion': ["gini", "entropy"],     
+        'clf__estimator__n_jobs':[-1]
+        }
+    cv = GridSearchCV(
+        pipeline,
+        parameters,
+        n_jobs=-1
+    )
+    return cv
 
 
 def evaluate_model(model, X_test, Y_test, category_names):

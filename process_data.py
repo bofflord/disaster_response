@@ -54,7 +54,6 @@ def clean_data(df):
     df: cleaned dataframe
     
     '''
-    
     # drop duplicates
     df = df.drop_duplicates()
     return df
@@ -75,7 +74,7 @@ def save_data(df, database_filename):
     #engine = create_engine(database_filename)
     engine = create_engine('sqlite:////home/workspace/data/' + database_filename)
     df.to_sql('InsertTableName', engine, index=False)  
-
+    
 
 def main():
     if len(sys.argv) == 4:
