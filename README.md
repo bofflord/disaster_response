@@ -76,16 +76,19 @@ The above mentioned commands requrire the following file structure:
 # 4. FILE DESCRIPTIONS
 * "process_data.py": python script for data processing. How to use the file:
  * go to the "data" directory.
- * execute the script with the following parameters
+ * execute the script with the following parameters: python process_data.py disaster_messages.csv disaster_categories.csv DisasterResponse.db
  * explanation of parameters:
-  * tbd
+  * disaster_messages.csv: data to process  
+  * disaster_categories.csv: data to process   
+  * DisasterResponse.db: sql lite database to save clean data to
 * "train_classifier.py": python script for model training. How to use the file:
- * go to the "data" directory.
- * execute the script with the following parameters
+ * go to the "model" directory.
+ * execute the script with the following parameters: python train_classifier.py DisasterResponse.db classifier.pkl
  * explanation of parameters:
-  * tbd
+  * DisasterResponse.db: sql lite database to load training and testing data from.
+  * classifier.pkl: trained model
 * "run.py": python script that starts web app. How to use the file:
- * go to the "data" directory.
+ * go to the "app" directory.
  * execute the script without any parameters
 * "master.html": html landing page of web app. Displays the following statistics on the training data:
   * Histogram of word count per message
