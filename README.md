@@ -95,8 +95,6 @@ The above mentioned commands requrire the following file structure:
   * Frequency of output categories
   * Distribution of message genres
 * "go.hmtl": html page that displays classification results of model.
-TBD
 
 # 5. HOW TO INTERACT WITH THE PROJECT
-TBD
-
+Since the main purpose of this analysis is educational, I would really appreciate any feedback on possible improvements in code, modeling and general problem-solving approach. Otherwise it would be may pleasure if my files could serve as orientation or base for other projects. 
